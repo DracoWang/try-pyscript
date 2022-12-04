@@ -8,13 +8,14 @@
     </py-env>
   </head>
   <body>
-    <div id="plot">
+    <h1>Test Plot</h1>
+    <div id="plot"></div>
     <py-script output="plot">
       import matplotlib.pyplot as plt
       import numpy as np
       
       x, y = np.random.randn(100), np.random.randn(100)
-      fig, ax = plt.subplot()
+      fig, ax = plt.subplots()
       ax.scatter(x, y)
       fig
     </py-script>
