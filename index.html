@@ -2,12 +2,21 @@
   <head>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-env>
+      - numpy
+      - matplotlib
+    </py-env>
   </head>
   <body>
-    <py-script>
-      print('Hello, world')
-      #name = input('Your name?\n')
-      #print(f'Hello, {name}')
+    <div id="plot">
+    <py-script output="plot">
+      import matplotlib.pyplot as plt
+      import numpy as np
+      
+      x, y = np.random.randn(100), np.random.randn(100)
+      fig, ax = plot.subplot()
+      ax.scatter(x, y)
+      fig
     </py-script>
   </body>
 </html>
